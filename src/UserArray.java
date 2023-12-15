@@ -1,4 +1,5 @@
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class UserArray {
 
@@ -8,13 +9,21 @@ public class UserArray {
                     this.integerList = intList;
           }
 
-          public static void randomSequential(){
+          public static ArrayList<Integer> randomSequential(ArrayList<Integer> integerList){
+                    Scanner s = new Scanner(System.in);
+                    System.out.println("How many sequential numbers would you like to sort?");
+                    int quantity = s.nextInt();
 
+                    for (int i = 1; i <= quantity; i++) {
+                              integerList.add(i);
+                    }
+                    Collections.shuffle(integerList);
+                    return integerList;
           }
 
-          public static void randomSet() {
+          public static void randomSet(ArrayList<Integer> integerList) {
           }
 
-          public static void randomCustom() {
+          public static void randomCustom(ArrayList<Integer> integerList) {
           }
 }

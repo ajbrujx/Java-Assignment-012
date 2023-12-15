@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class Main {
 
           private static void arraySelection() {
                     int userChoice;
+                    ArrayList <Integer> integerArrayList = new ArrayList<Integer>();
                     Scanner s = new Scanner(System.in);
                     System.out.println(userPrompt[0]);
                     for (int i = 1; i < userPrompt.length; i++) {
@@ -23,13 +25,13 @@ public class Main {
 
                     switch (userChoice) {
                               case 1:
-                                        UserArray.randomSequential();
+                                        UserArray.randomSequential(integerArrayList);
                                         break;
                               case 2:
-                                        UserArray.randomSet();
+                                        UserArray.randomSet(integerArrayList);
                                         break;
                               case 3:
-                                        UserArray.randomCustom();
+                                        UserArray.randomCustom(integerArrayList);
                                         break;
                               default:
                                         System.out.println("Invalid choice. Please select 1, 2, or 3.");
