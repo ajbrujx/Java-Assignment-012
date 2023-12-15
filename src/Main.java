@@ -1,6 +1,8 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
 
           private static String[] userPrompt = {
                   "Would you like to sort a set of",
@@ -18,15 +20,16 @@ public class Main {
                               System.out.printf("%d. %s\n", i, userPrompt[i]);
                     }
                     userChoice = s.nextInt();
+
                     switch (userChoice) {
                               case 1:
-                                        randomSequential();
+                                        UserArray.randomSequential();
                                         break;
                               case 2:
-                                        randomSet();
+                                        UserArray.randomSet();
                                         break;
                               case 3:
-                                        randomCustom();
+                                        UserArray.randomCustom();
                                         break;
                               default:
                                         System.out.println("Invalid choice. Please select 1, 2, or 3.");
