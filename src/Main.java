@@ -25,7 +25,7 @@ public class Main {
 
                     switch (userChoice) {
                               case 1:
-                                        UserArray.randomSequential(integerArrayList);
+                                        new SortingAlgorithms(UserArray.randomSequential(integerArrayList));
                                         break;
                               case 2:
                                         UserArray.randomSet(integerArrayList);
@@ -36,10 +36,10 @@ public class Main {
                               default:
                                         System.out.println("Invalid choice. Please select 1, 2, or 3.");
                     }
-
           }
           public static void main(String[] arges){
                     arraySelection();
+
           }
 
 

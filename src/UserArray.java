@@ -1,9 +1,12 @@
 import java.lang.reflect.Array;
+import java.util.Random;
+
 import java.util.*;
 
 public class UserArray {
 
           private List<Integer> integerList;
+          private static Random randomGenerator = new Random();
 
           public UserArray(List<Integer> intList){
                     this.integerList = intList;
@@ -13,27 +16,24 @@ public class UserArray {
                     Scanner s = new Scanner(System.in);
                     System.out.println("How many sequential numbers would you like to sort?");
                     int quantity = s.nextInt();
-
                     for (int i = 1; i <= quantity; i++) {
                               integerList.add(i);
                     }
-
-                    System.out.println(integerList.size());
-
-                    for (int i = 0; i < integerList.size() ; i++ ) {
-                              System.out.println(integerList.get(i));
-                    }
-
                     Collections.shuffle(integerList);
-
-                    for (int i = 0; i < integerList.size() ; i++ ) {
-                              System.out.println(integerList.get(i));
-                    }
-
                     return integerList;
           }
 
-          public static void randomSet(ArrayList<Integer> integerList) {
+          public static ArrayList<Integer> randomSet(ArrayList<Integer> integerList) {
+                    Scanner s = new Scanner(System.in);
+                    System.out.println("How many random numbers would you like to sort?");
+                    int quantity = s.nextInt();
+                    System.out.println(quantity);
+                    System.out.println("What range of random numbers would like to generate?");
+                    int range = s.nextInt();
+                    for (int i = 1; i <= quantity; i++) {
+                              integerList.add(randomGenerator.nextInt(range) + 1);
+                    }
+                    return integerList;
           }
 
           public static void randomCustom(ArrayList<Integer> integerList) {
