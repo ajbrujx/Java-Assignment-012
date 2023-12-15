@@ -17,7 +17,19 @@ public class UserArray {
                     for (int i = 1; i <= quantity; i++) {
                               integerList.add(i);
                     }
+
+                    System.out.println(integerList.size());
+
+                    for (int i = 0; i < integerList.size() ; i++ ) {
+                              System.out.println(integerList.get(i));
+                    }
+
                     Collections.shuffle(integerList);
+
+                    for (int i = 0; i < integerList.size() ; i++ ) {
+                              System.out.println(integerList.get(i));
+                    }
+
                     return integerList;
           }
 
